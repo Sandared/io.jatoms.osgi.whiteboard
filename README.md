@@ -38,3 +38,4 @@ This repository is just a showcase on how simple it is to have your own OSGi whi
 This section is for those who want to understand what is going on in the background so that this example works.
 
 ### What is a whiteboard?
+I know there are quite some explanations out there about what the OSGi whiteboard pattern is all about, e.g., the explanation on [enRoute](https://enroute.osgi.org/FAQ/400-patterns.html)

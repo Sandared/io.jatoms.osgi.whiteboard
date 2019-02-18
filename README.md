@@ -23,7 +23,7 @@ This repository is just a showcase on how simple it is to have your own OSGi whi
 1) Within your newly created project create
    1) The Whiteboard implementation
    1) An additional package "api" and within it
-      1) An interface `ITask` that extends `Runnable`
+      1) An interface `ITask`
       1) A `package-info.java` file declaring the api package to be exported via the `Export` annotation
 1) `cd ..` to go back into your parent project
 1) `type ds` to create a new component and fill out groupId and artifactId

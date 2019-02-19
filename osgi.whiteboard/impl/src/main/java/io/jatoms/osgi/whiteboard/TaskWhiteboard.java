@@ -9,14 +9,14 @@ import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Deactivate;
 import org.osgi.service.component.annotations.Reference;
-import org.osgi.service.component.annotations.ReferencePolicy;
+import org.osgi.service.component.annotations.ReferencePolicyOption;
 
 import io.jatoms.osgi.whiteboard.api.ITask;
 
 @Component(immediate = true)
 public class TaskWhiteboard extends TimerTask{
-    @Reference(policy=ReferencePolicy.DYNAMIC)
-    private final List<ITask> tasks = new CopyOnWriteArrayList<>();
+    @Reference(policy=ReferencePolicyOption.GREEDY)
+    private volatile List<ITask> tasks;
 
     private Timer timer = new Timer();
 

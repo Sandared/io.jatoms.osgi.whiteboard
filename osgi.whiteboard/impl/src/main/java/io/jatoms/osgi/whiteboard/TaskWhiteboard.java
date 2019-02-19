@@ -15,7 +15,7 @@ import io.jatoms.osgi.whiteboard.api.ITask;
 
 @Component(immediate = true)
 public class TaskWhiteboard extends TimerTask{
-    @Reference(policy=ReferencePolicyOption.GREEDY)
+    @Reference(policyOption=ReferencePolicyOption.GREEDY)
     private volatile List<ITask> tasks;
 
     private Timer timer = new Timer();
